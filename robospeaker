@@ -1,0 +1,11 @@
+import win32com.client
+if __name__ == '__main__':
+    print("____welcome Robospeaker created by shankar thakur___")
+    while True:
+        x = input("what do you want to speak: ")
+        if x== "s":
+            speaker = win32com.client.Dispatch("SAPI.SpVoice")
+            speaker.Speak(" ok bye bye friends")
+            break
+        speaker = win32com.client.Dispatch("SAPI.SpVoice")
+        speaker.Speak(f"{x}")
